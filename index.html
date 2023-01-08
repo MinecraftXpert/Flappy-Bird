@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Flappy Bird</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      *,
+      *::before,
+      *::after {
+        font-family: "Press Start 2P", cursive;
+      }
+
+      body {
+        background: black;
+      }
+
+      canvas,
+      h1,
+      button,
+      h2 {
+        user-select: none;
+      }
+
+      .placement {
+        position: absolute;
+        top: 25px;
+        left: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .hide {
+        display: none;
+      }
+
+      button {
+        cursor: pointer;
+        font-family: "Press Start 2P", cursive;
+        padding: 1rem 2rem;
+        box-shadow: 0px 2px 0px 9px #513103;
+        font-size: 1.5em;
+        background: none;
+        border: none;
+        outline: none;
+        background-color: #e06119;
+        border: 5px solid white;
+        color: white;
+        text-shadow: 0px 5px rgba(0, 0, 0, 0.6);
+      }
+
+      .btn-placement {
+        position: absolute;
+        top: 450px;
+      }
+
+      .gameOver {
+        position: absolute;
+        top: 200px;
+        left: 320px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+        -webkit-text-stroke: 1px black;
+      }
+
+      .gameOverBtn {
+        position: absolute;
+        top: 475px;
+        left: 350px;
+      }
+
+      .coolTitle,
+      .coolSubTxt {
+        color: white;
+        -webkit-text-stroke: 1px black;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas style="position: relative"></canvas>
+
+    <div class="placement">
+      <h1 class="coolTitle">Flappy Bird</h1>
+      <h2 class="coolSubTxt">Press the Start button to begin!</h2>
+
+      <div class="btn-placement">
+        <button>Start</button>
+      </div>
+    </div>
+
+    <h1 id="gameOver" class="gameOver" style="display: none">Game Over!</h1>
+
+    <button id="gameOverBtn" class="gameOverBtn" style="display: none">
+      Restart
+    </button>
+  </body>
+
+  <script src="index.js"></script>
+</html>
