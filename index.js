@@ -1,13 +1,14 @@
-// 
+// Gets the container and buttons so we can use DOM to manipluate the HTML
 const titleContainer = document.querySelector(".placement");
 const btn = document.querySelector("button");
 const restartBtn = document.querySelector("#gameOverBtn");
 
+// Gets our canvas so we can add in the getContext method
 const canvas = document.querySelector("canvas");
 const c = canvas.getContext("2d");
 
 // Creates the width and height of the canvas
-canvas.width = 1024; // 16:9
+canvas.width = 1024; // 16:9 ratio
 canvas.height = 576;
 
 // The y position of Flappy
